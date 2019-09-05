@@ -1,5 +1,5 @@
 .tiny-img{
-    width: 20%
+    width: 10%
 }
 .nav-color{
     background-color: #EBF5F7;
@@ -8,6 +8,34 @@
     width:90%;
 }
 .comment-img{
-    width:10%;
-    height: 10%
+    width:7%;
+    height: 7%
+}
+.text-size{
+    font-size: 14px;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .tiny-img{
+        width: 8%
+    }
+    .comment-img{
+        width:5%;
+        height: 5%
+    }
+    .text-size{
+        font-size: 14px;
+    }
+}
+
+@media only screen  and (min-width : 1224px) {
+    .tiny-img{
+        width: 8%
+    }
+    .comment-img{
+        width:5%;
+        height: 5%
+    }
+    .text-size{
+        font-size: 14px;
+    }
 }

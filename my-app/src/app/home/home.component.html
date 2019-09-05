@@ -1,16 +1,16 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light nav-color d-flex ">
-        <a routerLink="/" class="font-weight-light small mr-0 w-50" href="#">Cerrar Sesión</a>
+        <a routerLink="/" class="font-weight-light text-size mr-0 w-50" href="#">Cerrar Sesión</a>
           <ul *ngIf="users" class="navbar-nav">
             <li *ngFor="let user of users" class="nav-item active">
-              <p>{{users.name}}</p>
-              <img src='{{users.image}}' alt="">
+              <p>{{user.name}}</p>
+              <img src='{{user.image}}' alt="">
             </li>
           </ul>
           <ul *ngIf="!users" class="navbar-nav w-50">
               <li class="nav-item active d-flex justify-content-end align-items-center">
                 <p class="mb-0 mr-2">Valeria</p>
-                <img src="../../assets/images/no-photo.png" class="tiny-img" alt="">
+                <img src="assets/images/no-photo.png" class="tiny-img" alt="">
               </li>
             </ul>
       </nav>
@@ -19,16 +19,16 @@
     <div class="input-group mt-3 mx-4 mb-3 width-90">
         <input [(ngModel)]="comment.body" type="text" class="form-control" placeholder="Envíe un comentario" aria-label="Recipient's username" aria-describedby="button-addon2">
         <div class="input-group-append">
-          <button (click)="onSubmit(comment.body)" class="btn btn-outline-secondary btn-color" type="button" id="button-addon2">Enviar</button>
+          <button (click)="onSubmit()" class="btn btn-outline-secondary btn-color" type="button" id="button-addon2">Enviar</button>
         </div>
     </div>
     <div *ngIf="comments" class="card">
-        <div *ngFor="let user of users" class="card-body">
-          <p class="card-text">{{comments.body}}</p>
-          <h6 class="card-subtitle mb-2 text-muted">Escrito por: {{comments.info_user.name}}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">{{comments.info_user.created_at}}</h6>
+        <div *ngFor="let comment of comments" class="card-body">
+          <p class="card-text">{{comment.body}}</p>
+          <h6 class="card-subtitle mb-2 text-muted">Escrito por: {{comment.info_user.name}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">{{comment.info_user.created_at}}</h6>
         </div>
-        <img src='{{comments.info_user.image}}' alt="">
+        <img src='{{comment.info_user.image}}' alt="">
       </div>
       <div *ngIf="!comments" class="card mx-3">
           <div class="card-body d-flex">
@@ -37,7 +37,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">Escrito por: Valeria</h6>
                 <h6 class="card-subtitle mb-2 text-muted">2019-08-21 01:26:18</h6>
             </div>
-                <img src='../../assets/images/no-photo.png' class="comment-img" alt="">
+                <img src='assets/images/no-photo.png' class="comment-img" alt="">
           </div>
         </div>
 </section>
