@@ -1,0 +1,16 @@
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+.fill-available{
+    height: -webkit-fill-available;
+}
+.btn-color{
+    background-color: #4D7EB9;
+    border: 1px solid #4D7EB9;
+}
+.btn-color:hover{
+    background-color: #2F486B;
+    border: 1px solid #2F486B;
+}
